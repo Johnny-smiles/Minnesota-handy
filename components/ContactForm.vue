@@ -24,25 +24,58 @@ function handleSubmit() {
     margin: 4rem auto;
     max-width: 600px;
     background: #fffefc;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
-.contact input, .contact textarea {
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
-    margin-bottom: 1rem;
+
+.contact h2 {
+    margin-bottom: 0.5rem;
 }
+
+.contact p {
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.contact input,
+.contact textarea {
+    padding: 1.25rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    transition: box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(34, 72, 112, 0.15);
+    border-color: #224870;
+}
+
+.contact textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
 .contact button {
     background: #224870;
     color: white;
     font-weight: bold;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.contact button:hover {
+    background: #1b3b63;
 }
 </style>
