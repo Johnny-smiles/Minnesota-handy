@@ -2,7 +2,7 @@
     <section class="hero">
         <h1>Welcome to Your Friendly Neighborhood Experts</h1>
         <p>We're local, dependable, and always happy to lend a hand — rain, snow, or shine.</p>
-        <NuxtImg src="/tools-hero.jpg" width="700" alt="Friendly technicians with tools" />
+        <NuxtImg src="/tools-hero.png" width="700" alt="Friendly technicians with tools" />
         <br>
         <a href="#contact" class="cta">Get in Touch</a>
     </section>

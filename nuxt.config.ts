@@ -2,11 +2,19 @@
 export default defineNuxtConfig({
   ssr: true,
 
+  // 👇 Add this block to enable static output
+  nitro: {
+    preset: 'static'
+  },
+
   app: {
     head: {
       title: 'Minnesota Handy',
       meta: [
-        { name: 'description', content: 'Local Minnesota family-owned home services — repairs, installs, and neighborly help you can count on.' },
+        {
+          name: 'description',
+          content: 'Local Minnesota family-owned home services — repairs, installs, and neighborly help you can count on.'
+        },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [

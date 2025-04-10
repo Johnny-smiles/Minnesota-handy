@@ -4,17 +4,17 @@
         <p>We're not just service folks — we're your neighbors. Here's what we can help with:</p>
         <div class="grid">
             <div class="card">
-                <NuxtImg src="/socket.jpg" width="200" alt="Outlet services" />
+                <NuxtImg src="/tools.png" width="200" alt="Outlet services" />
                 <h3>Outlet Repair</h3>
                 <p>From sparks to silence — we’ll make sure your power’s flowing safe and steady.</p>
             </div>
             <div class="card">
-                <NuxtImg src="/circuit.jpg" width="200" alt="Circuit upgrades" />
+<!--                <NuxtImg src="/circuit.jpg" width="200" alt="Circuit upgrades" />-->
                 <h3>Panel Upgrades</h3>
                 <p>Need more juice? We’ll modernize your system without a fuss.</p>
             </div>
             <div class="card">
-                <NuxtImg src="/lighting.jpg" width="200" alt="Lighting installations" />
+<!--                <NuxtImg src="/lighting.jpg" width="200" alt="Lighting installations" />-->
                 <h3>Custom Lighting</h3>
                 <p>From cozy cabin glows to kitchen showstoppers — we brighten up your space with care.</p>
             </div>
