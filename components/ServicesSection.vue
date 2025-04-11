@@ -9,12 +9,12 @@
                 <p>From sparks to silence — we’ll make sure your power’s flowing safe and steady.</p>
             </div>
             <div class="card">
-<!--                <NuxtImg src="/circuit.jpg" width="200" alt="Circuit upgrades" />-->
+                <NuxtImg src="/circuit.png" width="200" alt="Circuit upgrades" />
                 <h3>Panel Upgrades</h3>
                 <p>Need more juice? We’ll modernize your system without a fuss.</p>
             </div>
             <div class="card">
-<!--                <NuxtImg src="/lighting.jpg" width="200" alt="Lighting installations" />-->
+                <NuxtImg src="/lighting.png" width="200" alt="Lighting installations" />
                 <h3>Custom Lighting</h3>
                 <p>From cozy cabin glows to kitchen showstoppers — we brighten up your space with care.</p>
             </div>
