@@ -1,22 +1,34 @@
 <template>
-    <section class="services">
-        <h2>Helping Hands for All Your Home Needs</h2>
-        <p>We're not just service folks — we're your neighbors. Here's what we can help with:</p>
-        <div class="grid">
-            <div class="card">
-                <NuxtImg src="/tools.png" width="200" alt="Outlet services" />
-                <h3>Outlet Repair</h3>
-                <p>From sparks to silence — we’ll make sure your power’s flowing safe and steady.</p>
-            </div>
-            <div class="card">
-                <NuxtImg src="/circuit.png" width="200" alt="Circuit upgrades" />
-                <h3>Panel Upgrades</h3>
-                <p>Need more juice? We’ll modernize your system without a fuss.</p>
-            </div>
-            <div class="card">
-                <NuxtImg src="/lighting.png" width="200" alt="Lighting installations" />
-                <h3>Custom Lighting</h3>
-                <p>From cozy cabin glows to kitchen showstoppers — we brighten up your space with care.</p>
+    <section class="services" aria-labelledby="services-heading">
+        <div class="services-content">
+            <h2 id="services-heading">Helping Hands for All Your Home Needs</h2>
+            <p>
+                We’re not just service folks — we’re your neighbors. Here’s what we can help with:
+            </p>
+            <div class="grid">
+                <article class="card" itemscope itemtype="https://schema.org/Service">
+                    <NuxtImg src="/tools.png" width="200" alt="Outlet services" />
+                    <h3 itemprop="name">Outlet Repair</h3>
+                    <p itemprop="description">
+                        From sparks to silence — we’ll make sure your power’s flowing safe and steady.
+                    </p>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/Service">
+                    <NuxtImg src="/circuit.png" width="200" alt="Electrical panel upgrade" />
+                    <h3 itemprop="name">Panel Upgrades</h3>
+                    <p itemprop="description">
+                        Need more juice? We’ll modernize your system without a fuss.
+                    </p>
+                </article>
+
+                <article class="card" itemscope itemtype="https://schema.org/Service">
+                    <NuxtImg src="/lighting.png" width="200" alt="Lighting installation" />
+                    <h3 itemprop="name">Custom Lighting</h3>
+                    <p itemprop="description">
+                        From cozy cabin glows to kitchen showstoppers — we brighten up your space with care.
+                    </p>
+                </article>
             </div>
         </div>
     </section>
@@ -30,6 +42,10 @@
     background: #f3f4f6;
     text-align: center;
 }
+.services-content {
+    max-width: 900px;
+    margin: auto;
+}
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -41,8 +57,9 @@
     background: white;
     padding: 1.5rem;
     border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     max-width: 300px;
+    text-align: left;
 }
 .card h3 {
     margin-top: 1rem;

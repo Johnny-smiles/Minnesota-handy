@@ -1,46 +1,51 @@
 <template>
-    <div>
+    <main>
         <HeroSection />
         <ServicesSection />
-        <ContactForm />
+        <section aria-labelledby="contact-heading">
+            <ContactForm />
+        </section>
+        <FaqSection />
         <Footer />
-    </div>
+    </main>
 </template>
 
 <script setup>
 import HeroSection from '~/components/HeroSection.vue'
 import ServicesSection from '~/components/ServicesSection.vue'
 import ContactForm from '~/components/ContactForm.vue'
+import FaqSection from '~/components/FaqSection.vue'
 import Footer from '~/components/Footer.vue'
-import { useHead } from '#imports'
+import { siteConfig } from '~/site.config'
 
 const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Minnesota Handy",
-    url: "https://minnesotahandy.netlify.app",
-    telephone: "+1-555-123-4567",
-    address: {
+    "name": siteConfig.siteName,
+    "url": siteConfig.siteUrl,
+    "telephone": siteConfig.phone,
+    "address": {
         "@type": "PostalAddress",
-        addressLocality: "Minneapolis",
-        addressRegion: "MN",
-        postalCode: "55401",
-        addressCountry: "US"
+        "addressLocality": siteConfig.location.city,
+        "addressRegion": siteConfig.location.state,
+        "postalCode": siteConfig.location.zip,
+        "addressCountry": siteConfig.location.country
     },
-    description: "Friendly, local home repair & electrical services in Minnesota.",
-    openingHours: "Mo-Fr 08:00-17:00"
+    "description": siteConfig.description,
+    "openingHours": siteConfig.hours,
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": siteConfig.location.latitude,
+        "longitude": siteConfig.location.longitude
+    }
 }
 
 useHead({
     script: [
         {
             type: 'application/ld+json',
-            innerHTML: JSON.stringify(structuredData)
+            children: JSON.stringify(structuredData)
         }
-    ],
-    // Prevents sanitization of JSON-LD
-    __dangerouslyDisableSanitizersByTagID: {
-        'ldjson': ['innerHTML']
-    }
+    ]
 })
 </script>
